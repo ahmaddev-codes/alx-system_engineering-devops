@@ -1,1 +1,2 @@
-#alx system engineering devops basic
+#!/bin/bash
+alx system engineering devops basic
