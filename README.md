@@ -1,3 +1,3 @@
 # Alx system engineering devops basic
-0-current_working_directory
-1-listit
+
+This projects shows tasks different shell commands and their implementation
