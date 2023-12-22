@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# A bash script that displays numbers from 1 to 20
+#+ displays 4 and then bad luck from China for the 4th loop iteration
+#+ displays 9 and then bad luck from Japan for the 9th loop iteration
+#+ displays 17 and then bad luck from Italy for the 17th loop iteration
+
+start=1
+stop=20
+
+while [ "$start" -le "$stop" ]; do
+	case "$start" in
+		4)
+			echo "$start"
+			echo "bad luck from China"
+			((start++))
+			;;
+		9)
+			echo "$start"
+			echo "bad luck from Japan"
+			((start++))
+			;;
+		17)
+                      	echo "$start"
+                        echo "bad luck from Italy"
+			((start++))
+			;;
+		*)
+                        echo "$start"
+			((start++))
+	esac
+done
