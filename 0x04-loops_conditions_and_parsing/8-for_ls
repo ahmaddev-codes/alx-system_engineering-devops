@@ -6,6 +6,7 @@
 
 for file in *; do
 	if [ -f "$file" ]; then
-		echo "$file"
+		namefile=$(echo "$file" | cut -d'-' -f2-)
+		echo "$namefile"
 	fi
 done
