@@ -1,5 +1,3 @@
-4-if_9_say_hi
-4-if_9_say_hi
 #!/usr/bin/env bash
 # A bash script that loops from 1 to 10
 #+ displays bad luck for the 4th loop iteration
