@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Bash script that groups visitors by IP and HTTP status code,
 #+ and displays this data.
 
