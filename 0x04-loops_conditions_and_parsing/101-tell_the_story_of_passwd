@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# A Bash script that displays the content of the file /etc/passwd,
+#+ using the while loop + IFS
+
+IFS=":"
+
+exec < /etc/passwd
+
+while read -r username password uid gid info home shell; do
+    echo "The user $username is part of the $gid gang, lives in $home, and rides $shell."
+    echo "USER ID INFO: $info"
+    echo
+done
+
+unset IFS
