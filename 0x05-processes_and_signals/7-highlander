@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
-# Kills 7-highlander process.
+# Prints something when receiving a SIGTERM signal
+trap 'echo "I am invincible!!!" ' TERM
 
-ps -ef | grep 7-highlander | grep -v grep | awk '{print $2}' | xargs kill -9
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
