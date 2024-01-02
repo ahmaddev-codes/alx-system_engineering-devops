@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# Stops 6-stop_me_if_you_can process.
-
-ps -ef | grep 6-stop_me_if_you_can | grep -v grep | awk '{print $2}' | xargs kill -9
