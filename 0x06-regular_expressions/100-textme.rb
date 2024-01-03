@@ -1,5 +1,18 @@
 #!/usr/bin/env ruby
 
-Format = ARGV[0].scan(/from:(.\w+)|to:(.\w+)|flags:([0-9:-]+)/)
-List = [Format[0].compact, Format[1].compact, Format[2].compact]
-puts List.join(',')
+# Read the log file
+log_content = File.read("text_messages.log")
+
+# Regular expression to extract sender, receiver, and flags
+regex = /\[from:(?<sender>[^\]]+)\] \[to:(?<receiver>[^\]]+)\] \[flags:(?<flags>[^\]]+)\]/
+
+# Finding all matches in the log content
+matches = log_content.scan(regex)
+
+# Output of the results
+matches.each do |match|
+  sender = match[0]
+  receiver = match[1]
+  flags = match[2]
+  puts "#{sender},#{receiver},#{flags}"
+end
