@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Check if an IP address is on the network using ping
+
+# Display usage if no argument is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 {IP_ADDRESS}"
+    exit 1
+fi
+
+# Extract the IP address from the command line argument
+ip_address="$1"
+
+# Ping the IP address 5 times
+ping -c 5 "$ip_address"
+
+# Check the exit status of ping
+if [ $? -eq 0 ]; then
+    echo "$ip_address is reachable."
+else
+    echo "$ip_address is not reachable."
+fi
